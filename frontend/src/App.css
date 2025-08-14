@@ -1,0 +1,235 @@
+.machine-control-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.control-panel {
+  background: linear-gradient(180deg, #4a90e2, #357abd);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ddd;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.title-bar {
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.title-bar h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background: #c0392b;
+}
+
+.panel-content {
+  padding: 30px;
+}
+
+.parameter-row, .product-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.parameter-row label, .product-row label {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 280px;
+  margin-right: 20px;
+}
+
+.parameter-row label small, .product-row label small {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parameter-input, .product-input {
+  background: white;
+  border: 2px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 120px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.parameter-input:focus, .product-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.unit {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.coil-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.coil-section label {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.coil-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.coil-input {
+  background: white;
+  border: 2px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coil-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.coil-btn {
+  background: #7f8c8d;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 24px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.coil-btn:hover {
+  background: #95a5a6;
+}
+
+.product-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reset-btn {
+  background: #27ae60;
+  color: white;
+  border: 2px solid #229954;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover {
+  background: #2ecc71;
+}
+
+.reset-all-btn {
+  background: #3498db;
+  color: white;
+  border: 2px solid #2980b9;
+  border-radius: 6px;
+  padding: 30px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.reset-all-btn:hover {
+  background: #5dade2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .parameter-row, .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .parameter-row label, .product-row label {
+    width: auto;
+    margin-right: 0;
+  }
+  
+  .coil-section {
+    text-align: left;
+    margin-top: 30px;
+  }
+  
+  .coil-control {
+    justify-content: flex-start;
+  }
+}
